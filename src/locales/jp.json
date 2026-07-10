@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "汎用ファイルコンバーター"
+  },
+  "header": {
+    "darkMode": "ダークモード",
+    "language": "言語"
+  },
+  "file": {
+    "dropzone": {
+      "title": "ここにファイルをドロップ",
+      "description": "またはクリックしてフォルダを選択",
+      "selectFiles": "または個別にファイルを選択"
+    },
+    "list": {
+      "count": "{{count}}件のファイルを選択中",
+      "clearAll": "すべてクリア",
+      "remove": "{{fileName}}を削除"
+    }
+  },
+  "format": {
+    "image": "画像",
+    "text": "テキスト",
+    "select": "出力フォーマットを選択"
+  },
+  "conversion": {
+    "start": "変換開始",
+    "cancel": "キャンセル",
+    "complete": "変換完了",
+    "failed": "変換失敗"
+  },
+  "settings": {
+    "quality": "品質",
+    "resize": "リサイズ",
+    "output": "出力フォルダ",
+    "naming": "ファイル命名",
+    "conflict": "衝突解決",
+    "deleteSource": "元ファイルを削除",
+    "browse": "参照",
+    "outputDefault": "デフォルト（ソースと同じ場所）",
+    "namingOriginal": "元の名前のまま",
+    "namingSequential": "元の名前 + 連番 (001)",
+    "namingDatetime": "元の名前 + 日時",
+    "conflictOverwrite": "上書き",
+    "conflictSkip": "スキップ",
+    "conflictRename": "リネーム (_N)",
+    "width": "幅 (px)",
+    "height": "高さ (px)",
+    "maintainAspectRatio": "アスペクト比を維持"
+  },
+  "progress": {
+    "processing": "{{total}}件中{{current}}件を処理中...",
+    "completed": "{{success}}件のファイルを変換しました",
+    "failed": "{{count}}件のファイルが失敗しました",
+    "cancelled": "変換がキャンセルされました"
+  },
+  "history": {
+    "title": "変換履歴",
+    "clear": "履歴をクリア",
+    "empty": "変換履歴がありません",
+    "restore": "設定を復元"
+  },
+  "errors": {
+    "diskSpace": "ディスク容量が不足しています。必要: {{required}}、空き: {{available}}",
+    "permission": "アクセス権限がありません: {{path}}",
+    "fileSize": "ファイルサイズが上限を超えています: {{fileName}} ({{size}}MB > {{limit}}MB)",
+    "unsupported": "非対応の変換です: {{from}} → {{to}}",
+    "parseError": "{{fileName}} の{{line}}行目でパースエラー: {{detail}}",
+    "fileRead": "ファイルの読み取りに失敗しました: {{fileName}} - {{detail}}",
+    "decode": "デコードエラー: {{fileName}} - {{detail}}",
+    "encode": "エンコードエラー: {{fileName}} - {{detail}}",
+    "validation": "バリデーションエラー: {{detail}}",
+    "cancelled": "変換がキャンセルされました",
+    "fileWrite": "ファイルの書き込みに失敗しました: {{fileName}} - {{detail}}",
+    "directoryCreate": "フォルダの作成に失敗しました: {{path}} - {{detail}}",
+    "startup": "起動エラー",
+    "startupDescription": "アプリケーションの初期化に失敗しました。アプリを再起動してください。",
+    "restart": "再起動"
+  },
+  "notifications": {
+    "success": "{{count}}件のファイルを正常に変換しました",
+    "error": "エラー: {{message}}",
+    "cancelled": "変換がキャンセルされました。{{completed}}件のファイルが完了しています。"
+  },
+  "largeFile": {
+    "title": "大容量ファイルの検出",
+    "description": "以下のファイルは100MBを超えています。変換に時間がかかる場合があります。",
+    "continue": "続行",
+    "skip": "大容量ファイルをスキップ"
+  }
+}

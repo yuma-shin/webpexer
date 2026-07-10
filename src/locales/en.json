@@ -1,0 +1,91 @@
+{
+  "app": {
+    "title": "Universal File Converter"
+  },
+  "header": {
+    "darkMode": "Dark Mode",
+    "language": "Language"
+  },
+  "file": {
+    "dropzone": {
+      "title": "Drop files here",
+      "description": "or click to select a folder",
+      "selectFiles": "or select individual files"
+    },
+    "list": {
+      "count": "{{count}} file(s) selected",
+      "clearAll": "Clear All",
+      "remove": "Remove {{fileName}}"
+    }
+  },
+  "format": {
+    "image": "Image",
+    "text": "Text",
+    "select": "Select output format"
+  },
+  "conversion": {
+    "start": "Start Conversion",
+    "cancel": "Cancel",
+    "complete": "Conversion Complete",
+    "failed": "Conversion Failed"
+  },
+  "settings": {
+    "quality": "Quality",
+    "resize": "Resize",
+    "output": "Output Folder",
+    "naming": "File Naming",
+    "conflict": "Conflict Resolution",
+    "deleteSource": "Delete Source Files",
+    "browse": "Browse",
+    "outputDefault": "Default (same as source)",
+    "namingOriginal": "Original",
+    "namingSequential": "Original + Sequential (001)",
+    "namingDatetime": "Original + Datetime",
+    "conflictOverwrite": "Overwrite",
+    "conflictSkip": "Skip",
+    "conflictRename": "Rename (_N)",
+    "width": "Width (px)",
+    "height": "Height (px)",
+    "maintainAspectRatio": "Maintain aspect ratio"
+  },
+  "progress": {
+    "processing": "Processing {{current}} of {{total}}...",
+    "completed": "{{success}} files converted successfully",
+    "failed": "{{count}} files failed",
+    "cancelled": "Conversion cancelled"
+  },
+  "history": {
+    "title": "Conversion History",
+    "clear": "Clear History",
+    "empty": "No conversion history",
+    "restore": "Restore Settings"
+  },
+  "errors": {
+    "diskSpace": "Insufficient disk space. Required: {{required}}, Available: {{available}}",
+    "permission": "Permission denied: {{path}}",
+    "fileSize": "File size exceeds limit: {{fileName}} ({{size}}MB > {{limit}}MB)",
+    "unsupported": "Unsupported conversion: {{from}} to {{to}}",
+    "parseError": "Parse error in {{fileName}} at line {{line}}: {{detail}}",
+    "fileRead": "Failed to read file: {{fileName}} - {{detail}}",
+    "decode": "Decode error: {{fileName}} - {{detail}}",
+    "encode": "Encode error: {{fileName}} - {{detail}}",
+    "validation": "Validation error: {{detail}}",
+    "cancelled": "Conversion was cancelled",
+    "fileWrite": "Failed to write file: {{fileName}} - {{detail}}",
+    "directoryCreate": "Failed to create folder: {{path}} - {{detail}}",
+    "startup": "Startup Error",
+    "startupDescription": "The application failed to initialize. Please restart the app.",
+    "restart": "Restart"
+  },
+  "notifications": {
+    "success": "{{count}} files converted successfully",
+    "error": "Error: {{message}}",
+    "cancelled": "Conversion was cancelled. {{completed}} files were completed."
+  },
+  "largeFile": {
+    "title": "Large Files Detected",
+    "description": "The following files exceed 100MB. Large files may take longer to convert.",
+    "continue": "Continue",
+    "skip": "Skip Large Files"
+  }
+}

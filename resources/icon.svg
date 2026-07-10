@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect x="16" y="16" width="480" height="480" rx="96" ry="96" fill="url(#bg)"/>
+  <!-- File/document icon (white) -->
+  <path d="M176 96h108l76 76v244c0 16.6-13.4 30-30 30H176c-16.6 0-30-13.4-30-30V126c0-16.6 13.4-30 30-30z" fill="rgba(255,255,255,0.95)"/>
+  <!-- Folded corner -->
+  <path d="M284 96v46c0 16.6 13.4 30 30 30h46" fill="none" stroke="rgba(147,51,234,0.3)" stroke-width="8" stroke-linecap="round"/>
+  <!-- Conversion arrows (circular) -->
+  <g transform="translate(290, 300)">
+    <path d="M-20,-40 A50,50 0 1,1 -50,10" fill="none" stroke="#7c3aed" stroke-width="18" stroke-linecap="round"/>
+    <polygon points="-58,-8 -42,18 -72,18" fill="#7c3aed"/>
+    <path d="M20,40 A50,50 0 1,1 50,-10" fill="none" stroke="#7c3aed" stroke-width="18" stroke-linecap="round"/>
+    <polygon points="58,8 42,-18 72,-18" fill="#7c3aed"/>
+  </g>
+</svg>
