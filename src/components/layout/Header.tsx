@@ -55,22 +55,23 @@ export function Header() {
         value={currentLanguage.value}
         onChange={(lang) => changeLanguage(lang)}
       >
-        <div className="relative">
-          <ListboxButton className="flex h-8 items-center rounded-lg px-2.5 text-sm font-medium text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
-            {currentLanguage.label}
-          </ListboxButton>
-          <ListboxOptions className="absolute right-0 z-10 mt-1 w-28 rounded-xl bg-white p-1 shadow-soft-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700">
-            {languages.map((lang) => (
-              <ListboxOption
-                key={lang.value}
-                value={lang.value}
-                className="cursor-pointer rounded-lg px-3 py-2 text-sm text-gray-700 data-[focus]:bg-gray-50 data-[selected]:font-semibold data-[selected]:text-primary-600 dark:text-gray-200 dark:data-[focus]:bg-gray-700"
-              >
-                {lang.label === "EN" ? "English" : "日本語"}
-              </ListboxOption>
-            ))}
-          </ListboxOptions>
-        </div>
+        <ListboxButton className="flex h-8 items-center rounded-lg px-2.5 text-sm font-medium text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-gray-200">
+          {currentLanguage.label}
+        </ListboxButton>
+        <ListboxOptions
+          anchor="bottom end"
+          className="z-50 mt-1 w-28 rounded-xl bg-white p-1 shadow-soft-lg border border-gray-100 dark:bg-gray-800 dark:border-gray-700"
+        >
+          {languages.map((lang) => (
+            <ListboxOption
+              key={lang.value}
+              value={lang.value}
+              className="cursor-pointer rounded-lg px-3 py-2 text-sm text-gray-700 data-[focus]:bg-gray-50 data-[selected]:font-semibold data-[selected]:text-primary-600 dark:text-gray-200 dark:data-[focus]:bg-gray-700"
+            >
+              {lang.label === "EN" ? "English" : "日本語"}
+            </ListboxOption>
+          ))}
+        </ListboxOptions>
       </Listbox>
     </header>
   );

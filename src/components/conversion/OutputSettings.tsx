@@ -92,36 +92,37 @@ export function OutputSettings({
           {t("settings.naming")}
         </label>
         <Listbox value={fileNaming} onChange={onFileNamingChange}>
-          <div className="relative">
-            <ListboxButton className="relative w-full cursor-pointer rounded-xl border border-gray-100 bg-surface-50 py-2.5 pl-3.5 pr-10 text-left text-sm transition-all hover:border-primary-200 focus:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
-              <span>{t(selectedNaming.labelKey)}</span>
-              <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                <svg
-                  className="h-4 w-4 text-gray-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </ListboxButton>
-            <ListboxOptions className="absolute z-10 mt-2 max-h-60 w-full overflow-auto rounded-2xl bg-white p-2 shadow-soft-lg focus:outline-none dark:bg-gray-800">
-              {NAMING_OPTIONS.map((option) => (
-                <ListboxOption
-                  key={option.value}
-                  value={option.value}
-                  className="cursor-pointer rounded-xl px-3 py-2.5 text-sm text-gray-700 data-[focus]:bg-primary-50 data-[selected]:bg-primary-50 data-[selected]:text-primary-700 dark:text-gray-200 dark:data-[focus]:bg-gray-700 dark:data-[selected]:bg-primary-900/30 dark:data-[selected]:text-primary-300"
-                >
-                  {t(option.labelKey)}
-                </ListboxOption>
-              ))}
-            </ListboxOptions>
-          </div>
+          <ListboxButton className="relative w-full cursor-pointer rounded-xl border border-gray-100 bg-surface-50 py-2.5 pl-3.5 pr-10 text-left text-sm transition-all hover:border-primary-200 focus:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
+            <span>{t(selectedNaming.labelKey)}</span>
+            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg
+                className="h-4 w-4 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+          </ListboxButton>
+          <ListboxOptions
+            anchor="bottom start"
+            className="z-50 mt-2 max-h-60 w-[var(--button-width)] overflow-auto rounded-2xl bg-white p-2 shadow-soft-lg focus:outline-none dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
+          >
+            {NAMING_OPTIONS.map((option) => (
+              <ListboxOption
+                key={option.value}
+                value={option.value}
+                className="cursor-pointer rounded-xl px-3 py-2.5 text-sm text-gray-700 data-[focus]:bg-primary-50 data-[selected]:bg-primary-50 data-[selected]:text-primary-700 dark:text-gray-200 dark:data-[focus]:bg-gray-700 dark:data-[selected]:bg-primary-900/30 dark:data-[selected]:text-primary-300"
+              >
+                {t(option.labelKey)}
+              </ListboxOption>
+            ))}
+          </ListboxOptions>
         </Listbox>
       </div>
 
@@ -134,36 +135,37 @@ export function OutputSettings({
           value={conflictResolution}
           onChange={onConflictResolutionChange}
         >
-          <div className="relative">
-            <ListboxButton className="relative w-full cursor-pointer rounded-xl border border-gray-100 bg-surface-50 py-2.5 pl-3.5 pr-10 text-left text-sm transition-all hover:border-primary-200 focus:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
-              <span>{t(selectedConflict.labelKey)}</span>
-              <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
-                <svg
-                  className="h-4 w-4 text-gray-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </ListboxButton>
-            <ListboxOptions className="absolute z-10 mt-2 max-h-60 w-full overflow-auto rounded-2xl bg-white p-2 shadow-soft-lg focus:outline-none dark:bg-gray-800">
-              {CONFLICT_OPTIONS.map((option) => (
-                <ListboxOption
-                  key={option.value}
-                  value={option.value}
-                  className="cursor-pointer rounded-xl px-3 py-2.5 text-sm text-gray-700 data-[focus]:bg-primary-50 data-[selected]:bg-primary-50 data-[selected]:text-primary-700 dark:text-gray-200 dark:data-[focus]:bg-gray-700 dark:data-[selected]:bg-primary-900/30 dark:data-[selected]:text-primary-300"
-                >
-                  {t(option.labelKey)}
-                </ListboxOption>
-              ))}
-            </ListboxOptions>
-          </div>
+          <ListboxButton className="relative w-full cursor-pointer rounded-xl border border-gray-100 bg-surface-50 py-2.5 pl-3.5 pr-10 text-left text-sm transition-all hover:border-primary-200 focus:border-primary-300 focus:outline-none focus:ring-2 focus:ring-primary-100 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
+            <span>{t(selectedConflict.labelKey)}</span>
+            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+              <svg
+                className="h-4 w-4 text-gray-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </span>
+          </ListboxButton>
+          <ListboxOptions
+            anchor="bottom start"
+            className="z-50 mt-2 max-h-60 w-[var(--button-width)] overflow-auto rounded-2xl bg-white p-2 shadow-soft-lg focus:outline-none dark:bg-gray-800 border border-gray-100 dark:border-gray-700"
+          >
+            {CONFLICT_OPTIONS.map((option) => (
+              <ListboxOption
+                key={option.value}
+                value={option.value}
+                className="cursor-pointer rounded-xl px-3 py-2.5 text-sm text-gray-700 data-[focus]:bg-primary-50 data-[selected]:bg-primary-50 data-[selected]:text-primary-700 dark:text-gray-200 dark:data-[focus]:bg-gray-700 dark:data-[selected]:bg-primary-900/30 dark:data-[selected]:text-primary-300"
+              >
+                {t(option.labelKey)}
+              </ListboxOption>
+            ))}
+          </ListboxOptions>
         </Listbox>
       </div>
 
